@@ -16,14 +16,14 @@ import { RouterLink } from "vue-router";
           <h5 class="label">News page</h5>
         </div>
       </router-link>
-      <router-link>
+      <router-link to="/chats">
         <div>
           <img src="../assets/icons/chat.svg" alt="chats" />
           <h5 class="label">Chats</h5>
         </div>
       </router-link>
 
-      <router-link>
+      <router-link to="/friends">
         <div>
           <img src="../assets/icons/friends.svg" />
           <h5 class="label">Friends</h5>

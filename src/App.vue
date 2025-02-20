@@ -2,6 +2,11 @@
 import { RouterLink, RouterView } from "vue-router";
 import PageHeader from "./components/PageHeader.vue";
 import NavBar from "./components/NavBar.vue";
+import { useUserStore } from "./stores/user";
+const userStore = useUserStore();
+userStore.setCurrentUser();
+const currentUser = userStore.getCurrentUser;
+console.log(currentUser);
 </script>
 
 <template>
@@ -16,15 +21,7 @@ import NavBar from "./components/NavBar.vue";
   </main>
 </template>
 
-<style>
-.page-content {
-  position: fixed;
-  top: 15%;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  width: 85%;
-}
+<style scoped>
 .leftBar {
   position: fixed;
   top: 8vh;
@@ -35,7 +32,7 @@ import NavBar from "./components/NavBar.vue";
   max-width: 360px;
   display: flex;
   flex-direction: column;
-  z-index: 1;
+  z-index: 3;
 }
 .header {
   padding: 0.25rem;
@@ -51,11 +48,10 @@ import NavBar from "./components/NavBar.vue";
   z-index: 2;
 }
 main {
+  position: relative;
   background-color: #4a4a4a;
-  position: fixed;
-  top: 8%;
+  top: 8vh;
   left: 15%;
   width: 85%;
-  height: 92%;
 }
 </style>

@@ -1,19 +1,21 @@
 <template>
-  <div class="new-post">
+  <div class="new-post input-group">
     <input placeholder="Something new?" type="text" id="new-post-input" />
-    <button
-      class="btn btn-outline-secondary btn-sm d-flex align-items-center"
-      type="button"
-    >
-      <img src="../assets/icons/clip.svg" style="height: 3vh" />
-    </button>
-    <button
-      class="btn btn-outline-secondary btn-sm d-flex align-items-center"
-      type="button"
-      id="create-post-button"
-    >
-      <img src="../assets/icons/send-blue.svg" style="height: 3vh" />
-    </button>
+    <div class="input-group-append d-flex" style="z-index: 1">
+      <button
+        class="btn btn-outline-secondary btn-sm d-flex align-items-center"
+        type="button"
+      >
+        <img src="../assets/icons/clip.svg" style="height: 3vh" />
+      </button>
+      <button
+        class="btn btn-outline-secondary btn-sm d-flex align-items-center"
+        type="button"
+        id="create-post-button"
+      >
+        <img src="../assets/icons/send-blue.svg" style="height: 3vh" />
+      </button>
+    </div>
   </div>
 </template>
 <style scoped>

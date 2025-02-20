@@ -23,5 +23,6 @@ defineProps({
   justify-content: space-around;
   width: 100%;
   height: 7%;
+  z-index: 2;
 }
 </style>
